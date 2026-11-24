@@ -3,76 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Napp OS organization homepage.">
+  <meta name="description" content="Explore Napp OS, its use cases, and its core open-source components.">
   <title>Napp OS</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --background: #f4f1e9;
-      --text: #182822;
-      --muted: #45574f;
-      --accent: #1d624b;
-      --line: #a2b3a9;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --background: #14211c;
-        --text: #edf4eb;
-        --muted: #b0c2b8;
-        --accent: #a0dec5;
-        --line: #647e70;
-      }
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100svh;
-      display: grid;
-      align-items: center;
-      background: var(--background);
-      color: var(--text);
-      font-family: system-ui, sans-serif;
-    }
-
-    main {
-      width: min(calc(100% - 3rem), 46rem);
-      margin-inline: auto;
-      padding-block: 4rem;
-      border-block: 1px solid var(--line);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 12vw, 8rem);
-      line-height: 1;
-      letter-spacing: -0.075em;
-    }
-
-    p {
-      margin: 1.25rem 0 2rem;
-      color: var(--muted);
-      font-size: clamp(1.15rem, 3vw, 1.6rem);
-    }
-
-    a {
-      color: var(--accent);
-      font-weight: 650;
-      text-underline-offset: 0.25em;
-    }
-
-    a:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 0.4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Napp OS</h1>
-    <p>NAPP is Not APP.</p>
-    <a href="https://github.com/Napp-OS">Napp OS on GitHub</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="home" class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#home" aria-label="Napp OS home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Napp OS
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#use-cases">Use cases</a>
+        <a href="#components">Components</a>
+      </nav>
+      <a class="header-github" href="https://github.com/Napp-OS">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">NAPP is<br><span>Not APP.</span></h1>
+        <p>Explore the use cases and open-source components of Napp OS.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#use-cases">Explore use cases <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#components">View components</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="stack">
+          <div class="stack-layer stack-bottom"></div>
+          <div class="stack-layer stack-middle"></div>
+          <div class="stack-layer stack-top">
+            <div class="stack-glyph"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section" aria-labelledby="use-cases-title">
+      <div class="section-heading">
+        <h2 id="use-cases-title">Use cases</h2>
+        <p>Examples for these areas are in preparation.</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario-card">
+          <div class="scenario-icon icon-workflow" aria-hidden="true"><span></span></div>
+          <h3>Workflows</h3>
+          <p>End-to-end examples that show how a task gets done.</p>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-icon icon-integrations" aria-hidden="true"><span></span></div>
+          <h3>Integrations</h3>
+          <p>Examples of connecting Napp OS with existing tools and systems.</p>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-icon icon-operations" aria-hidden="true"><span></span></div>
+          <h3>Deployment</h3>
+          <p>Examples of setup and day-to-day operation in different environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="components" class="section components" aria-labelledby="components-title">
+      <div class="section-heading">
+        <h2 id="components-title">Core open-source components</h2>
+        <p>Each listing will include the component’s role, source code, and documentation.</p>
+      </div>
+      <div class="component-panel">
+        <div>
+          <h3>Component directory</h3>
+          <p>Component listings are coming. In the meantime, browse the organization’s public repositories.</p>
+        </div>
+        <a class="button button-secondary" href="https://github.com/orgs/Napp-OS/repositories?type=public">
+          Browse repositories <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="wordmark" href="#home" aria-label="Napp OS home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Napp OS
+      </a>
+      <a href="https://github.com/Napp-OS">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
 </html>
