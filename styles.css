@@ -77,15 +77,9 @@ a {
 }
 
 .brand-mark {
-  width: 1.7rem;
-  height: 1.7rem;
-  border: 1px solid #c5b0ef;
-  border-radius: 8px;
-  background:
-    linear-gradient(var(--accent) 0 0) 46% 31% / 42% 2px no-repeat,
-    linear-gradient(var(--accent) 0 0) 58% 50% / 42% 2px no-repeat,
-    linear-gradient(var(--accent) 0 0) 70% 69% / 42% 2px no-repeat,
-    var(--tint-strong);
+  flex: none;
+  width: 2.25rem;
+  height: auto;
 }
 
 .site-nav {
