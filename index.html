@@ -3,36 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore Napp OS, its use cases, and its core open-source components.">
+  <meta name="description" content="Explore Napp OS, its use cases, and its core components." data-zh-content="了解 Napp OS、使用场景与核心组件。">
   <title>Napp OS</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-zh="跳到主要内容">Skip to content</a>
   <header id="home" class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#home" aria-label="Napp OS home">
+      <a class="wordmark" href="#home" aria-label="Napp OS home" data-zh-label="Napp OS 首页">
         <img class="brand-mark" src="brand-mark.svg" alt="" width="260" height="204">
         Napp OS
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#use-cases">Use cases</a>
-        <a href="#components">Components</a>
+      <nav class="site-nav" aria-label="Main navigation" data-zh-label="主导航">
+        <a href="#use-cases" data-zh="工作负载">Workloads</a>
+        <a href="#components" data-zh="基础设施">Infra</a>
+        <a href="#contact" data-zh="联系">Contact</a>
       </nav>
-      <a class="header-github" href="https://github.com/Napp-OS">
-        GitHub <span aria-hidden="true">↗</span>
-      </a>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Language" data-zh-label="语言" hidden>
+          <button type="button" lang="en" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" lang="zh-CN" data-language="zh-CN" aria-pressed="false">中文</button>
+        </div>
+        <a class="header-github" href="https://github.com/Napp-OS">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="main" class="container">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">NAPP is<br><span>Not APP.</span></h1>
-        <p>Explore the use cases and open-source components of Napp OS.</p>
+        <h1 id="hero-title" lang="en" aria-label="NAPP is Not APP.">
+          <span class="hero-title-first">NAPP is</span>
+          <span class="hero-title-accent"><span>N</span><span class="hero-title-insert"><span>ot </span></span><span>APP.</span></span>
+        </h1>
+        <p data-zh="面向 AI Agent 训练与运行的基础设施。">Infra for training and running AI agents.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#use-cases">Explore use cases <span aria-hidden="true">↓</span></a>
-          <a class="button button-secondary" href="#components">View components</a>
+          <a class="button button-primary" href="#use-cases"><span data-zh="查看工作负载">Explore workloads</span> <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#components" data-zh="查看核心基础设施">View Core Infra</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -48,48 +59,56 @@
 
     <section id="use-cases" class="section" aria-labelledby="use-cases-title">
       <div class="section-heading">
-        <h2 id="use-cases-title">Use cases</h2>
-        <p>Examples for these areas are in preparation.</p>
+        <h2 id="use-cases-title" data-zh="工作负载">Workloads</h2>
       </div>
       <div class="scenario-grid">
         <article class="scenario-card">
           <div class="scenario-icon icon-workflow" aria-hidden="true"><span></span></div>
-          <h3>Workflows</h3>
-          <p>End-to-end examples that show how a task gets done.</p>
+          <h3 data-zh="强化学习训练">RL Training</h3>
+          <p data-zh="由 Napp OS 基础设施驱动的高速 rollout。">Super-fast rollouts powered by Napp OS infrastructure.</p>
         </article>
         <article class="scenario-card">
           <div class="scenario-icon icon-integrations" aria-hidden="true"><span></span></div>
-          <h3>Integrations</h3>
-          <p>Examples of connecting Napp OS with existing tools and systems.</p>
-        </article>
-        <article class="scenario-card">
-          <div class="scenario-icon icon-operations" aria-hidden="true"><span></span></div>
-          <h3>Deployment</h3>
-          <p>Examples of setup and day-to-day operation in different environments.</p>
+          <h3 data-zh="个人 Agent">Personal Agent</h3>
+          <p data-zh="让你掌控 Agent 的运行环境。">Puts you in control of your agent’s environment.</p>
         </article>
       </div>
     </section>
 
-    <section id="components" class="section components" aria-labelledby="components-title">
-      <div class="section-heading">
-        <h2 id="components-title">Core open-source components</h2>
-        <p>Each listing will include the component’s role, source code, and documentation.</p>
-      </div>
-      <div class="component-panel">
-        <div>
-          <h3>Component directory</h3>
-          <p>Component listings are coming. In the meantime, browse the organization’s public repositories.</p>
-        </div>
+    <section id="components" class="section" aria-labelledby="components-title">
+      <div class="section-heading component-heading">
+        <h2 id="components-title" data-zh="核心基础设施">Core Infra</h2>
         <a class="button button-secondary" href="https://github.com/orgs/Napp-OS/repositories?type=public">
-          Browse repositories <span aria-hidden="true">↗</span>
+          <span data-zh="浏览公开仓库">Browse public repositories</span> <span aria-hidden="true">↗</span>
         </a>
+      </div>
+      <ul class="component-list">
+        <li>
+          <h3><code>nappervisor</code></h3>
+          <p data-zh="由半虚拟化技术驱动，轻松为所有 Agent 上下文创建快照。">Easily snapshot all your agentic contexts, powered by para-virtualization technologies.</p>
+        </li>
+        <li>
+          <h3><code>napp-linux</code></h3>
+          <p data-zh="安全、高效，专为运行 Agent 工作负载打造的 Linux 发行版。">Securely and efficiently, a Linux distribution built for running agentic workloads.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <h2 id="contact-title" data-zh="联系">Contact</h2>
+      </div>
+      <div class="contact-panel">
+        <h3 data-zh="使用与未来规划">Usage and roadmap</h3>
+        <p data-zh="如需使用帮助，或想讨论 Napp OS 的未来规划，欢迎发邮件联系。">Get in touch for help using Napp OS or to discuss our future plans.</p>
+        <a class="button button-secondary" href="mailto:jc@napp-os.com">jc@napp-os.com</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="wordmark" href="#home" aria-label="Napp OS home">
+      <a class="wordmark" href="#home" aria-label="Napp OS home" data-zh-label="Napp OS 首页">
         <img class="brand-mark" src="brand-mark.svg" alt="" width="260" height="204">
         Napp OS
       </a>
